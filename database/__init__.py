@@ -11,5 +11,10 @@ from .crud import (
     delete_category,
     delete_profession,
     delete_software,
-    update_software_field
+    update_software_field,
+    add_item_request,
+    get_pending_requests,
+    update_request_status,
+    get_request_by_id
 )
+
