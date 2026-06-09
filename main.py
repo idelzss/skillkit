@@ -43,6 +43,7 @@ async def main():
     # Запуск dummy веб-сервера для Render (Free tier вимагає відкриття порту)
     app = web.Application()
     app.router.add_get('/', handle)
+    app.router.add_get('/healthz', handle)
     runner = web.AppRunner(app)
     await runner.setup()
     port = int(os.getenv("PORT", 8080))
